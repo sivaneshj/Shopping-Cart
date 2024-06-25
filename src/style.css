@@ -44,8 +44,8 @@ body{
     grid-template-columns: repeat(4,223px);
     grid-template-rows: auto;
     gap: 30px;
-    width: 100%;
     text-align: center;
+    box-sizing: content-box;
     justify-content: center;
     padding-bottom: 100px;
 }
