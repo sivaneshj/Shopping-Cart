@@ -28,7 +28,6 @@ body{
     position: absolute;
     top: -15px;
     right: -10px;
-    color: white;
     font-size: 16px;
     background-color: red;
     padding: 5px;
@@ -37,25 +36,25 @@ body{
 }
 
 .shop{
-    position: relative;
+    position: absolute;
     top: 8rem;
     z-index: -1;
     display: grid;
     grid-template-columns: repeat(4,223px);
     grid-template-rows: auto;
     gap: 30px;
+    width: 100%;
     text-align: center;
-    box-sizing: content-box;
     justify-content: center;
     padding-bottom: 100px;
 }
 
-@media (max-width: 992px){
+@media (max-width: 1024px){
     .shop{
         grid-template-columns: repeat(2, 223px);
     }
 }
-@media (max-width: 550px){
+@media (max-width: 568px){
     .shop{
         grid-template-columns: 223px;
     }
@@ -74,10 +73,10 @@ body{
     padding: 10px;
     gap:10px;
 }
+
 .pricing{
     display: flex;
     justify-content: space-between;
-    margin: 10px 4px;
     margin-bottom: auto;
     padding: 4px;
     align-items: center;
@@ -97,6 +96,8 @@ body{
 .button > i{
     border: 1px solid black;
 }
+
+/*cart design  */
 
 .bi-dash{
     color: red;
@@ -120,7 +121,6 @@ a{
     position: relative;
     z-index: -1;
     top: 8rem;
-    width: 100%;
    text-align: center;
    margin-bottom: 20px;
 

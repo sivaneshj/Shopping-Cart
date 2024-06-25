@@ -60,7 +60,6 @@ var increment =(id)=>{
     else{
         search.items +=1;
     }
-    generatebox()
     update(id);
     localStorage.setItem("data",JSON.stringify(basket))
 }
@@ -69,13 +68,12 @@ var decrement =(id)=>{
     if(search === undefined){
             return
     }
-    else if(search.items === 0) return;
     else{
         search.items -= 1;
     }
      update(id);
      basket = basket.filter((x)=>x.items !== 0);
-     generatebox()
+     generatebox();
      localStorage.setItem("data",JSON.stringify(basket))
 }
 var update =(id)=>{
@@ -86,16 +84,16 @@ var update =(id)=>{
 }
 var remove = (id)=>{
     basket = basket.filter((x)=> x.id !== id)
-    generatebox();
     calculate();
     TotalAmount()
     localStorage.setItem("data",JSON.stringify(basket))
+    generatebox();
 }
 var clearCart = ()=>{
     basket.length = 0 ;
-    generatebox();
     calculate()
     localStorage.setItem("data",JSON.stringify(basket));
+    generatebox();
 }
 let TotalAmount = () => {
     if (basket.length !== 0) {

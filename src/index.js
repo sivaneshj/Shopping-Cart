@@ -38,15 +38,15 @@ var increment =(id)=>{
     else{
         search.items +=1;
     }
-    update(id);
+
     localStorage.setItem("data",JSON.stringify(basket))
+    update(id);
 }
 var decrement =(id)=>{
     let search = basket.find((x)=> x.id === id);
     if(search === undefined){
             return
     }
-    else if(search.items === 0) return;
     else{
         search.items -= 1;
     }
